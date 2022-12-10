@@ -1,0 +1,26 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  = link_to 'TRAAF LOGISTICS', root_path, class: 'navbar-brand border border-light rounded p-1'
+  
+  button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNav"]
+    span.navbar-toggler-icon
+  
+  #navbarNav.collapse.navbar-collapse
+    ul.navbar-nav
+
+      li.nav-item[class='#{request.path == root_path ? 'active' : ''}']
+        = link_to 'Home', root_path, class: 'nav-link'
+
+      li.nav-item[class='#{request.path == users_path ? 'active' : ''}']
+        = link_to 'Users', root_path, class: 'nav-link'
+
+      / li.nav-item
+        / a.nav-link[href="#"]
+          / | Features
+
+      / li.nav-item
+        / a.nav-link[href="#"]
+          / | Pricing
+
+      / li.nav-item
+        / a.nav-link.disabled[href="#"]
+          / | Disabled
