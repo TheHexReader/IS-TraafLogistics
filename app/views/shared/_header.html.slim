@@ -8,13 +8,13 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
     ul.navbar-nav
 
       li.nav-item
-        = link_to 'Home', root_path, class: "nav-link #{request.path == root_path ? 'active' : ''}"
+        = link_to 'Главная', root_path, class: "nav-link #{request.path == root_path ? 'active' : ''}"
 
       / li.nav-item[class='#{request.path == '' ? 'active' : ''}']
       /   = link_to 'Users', root_path, class: 'nav-link'
 
       li.nav-item[class='#{request.path == new_user_session_path ? 'active' : ''}']
-        = link_to 'Log In', new_user_session_path, class: "nav-link #{request.path == new_user_session_path ? 'active' : ''}"
+        = link_to 'Войти', new_user_session_path, class: "nav-link #{request.path == new_user_session_path ? 'active' : ''}"
 
       / li.nav-item
         / a.nav-link[href="#"]

@@ -1,7 +1,7 @@
 .d-flex.align-items-center.justify-content-center
   .card.border-dark.shadow.p-3.w-25.m-5
-    = link_to 'Зарегистрироваться', new_user_registration_path, class: 'float-right btn btn-outline-primary'
-    h4.card-title.mb-4.mt-1.d-flex.align-items-center.justify-content-center.m-2
+    = link_to 'Зарегистрироваться', new_user_registration_path, class: 'float-right btn btn-outline-primary m-2'
+    h4.card-title.mb-4.mt-1.d-flex.align-items-center.justify-content-center
       | Войти
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       = render 'devise/shared/error_messages'
