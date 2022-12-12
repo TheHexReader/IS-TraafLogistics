@@ -16,7 +16,10 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
       - if current_user.nil?
         li.nav-item[class='#{request.path == new_user_session_path ? 'active' : ''}']
           = link_to 'Войти', new_user_session_path, class: "nav-link #{request.path == new_user_session_path ? 'active' : ''}"
-      - else 
+      - else
+        li.nav-item
+          .nav-link
+            | #{current_user.email}
         li.nav-item
           = button_to 'Выйти', destroy_user_session_path, { method: :delete, class: 'nav-link text-decoration-none bg-dark border-0' }
 
