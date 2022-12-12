@@ -13,8 +13,12 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
       / li.nav-item[class='#{request.path == '' ? 'active' : ''}']
       /   = link_to 'Users', root_path, class: 'nav-link'
 
-      li.nav-item[class='#{request.path == new_user_session_path ? 'active' : ''}']
-        = link_to 'Войти', new_user_session_path, class: "nav-link #{request.path == new_user_session_path ? 'active' : ''}"
+      - if current_user.nil?
+        li.nav-item[class='#{request.path == new_user_session_path ? 'active' : ''}']
+          = link_to 'Войти', new_user_session_path, class: "nav-link #{request.path == new_user_session_path ? 'active' : ''}"
+      - else 
+        li.nav-item
+          = button_to 'Выйти', destroy_user_session_path, { method: :delete, class: 'nav-link text-decoration-none bg-dark border-0' }
 
       / li.nav-item
         / a.nav-link[href="#"]
