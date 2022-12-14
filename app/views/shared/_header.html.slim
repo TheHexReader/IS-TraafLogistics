@@ -18,6 +18,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
           = link_to 'Войти', new_user_session_path, class: "nav-link #{request.path == new_user_session_path ? 'active' : ''}"
       - else
         li.nav-item
+          = link_to 'Пользователи', users_path, class: "nav-link #{request.path == users_path ? 'active' : ''}"
+        li.nav-item
           .nav-link
             | #{current_user.email}
         li.nav-item
