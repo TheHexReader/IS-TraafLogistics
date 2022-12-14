@@ -1,2 +1,18 @@
-h1
-  | Users page
+table.table.table-striped.table-hover.mb-5
+  thead
+     tr
+      th = 'ID'
+      th = 'Email'
+      th = 'Роль'
+      th = 'Создали'
+      th = 'Обновляли'
+      th
+  tbody
+    - @users.each do |user|
+      tr
+        td = user.id
+        td = user.email
+        td = Role.find_by(id: user.roles_id).role_name
+        td = user.created_at
+        td = user.updated_at
+        td = link_to 'Посмотреть', user_path(user), class: 'text-decoration-none btn btn-primary'
