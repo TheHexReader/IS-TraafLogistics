@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Role.create!(role_name: 'Admin')
-Role.create!(role_name: 'Common')
+Role.create!(role_name: 'Admin', can_destroy: true)
+Role.create!(role_name: 'Common', can_destroy: false)

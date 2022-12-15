@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2022_12_10_062129) do
   create_table "roles", force: :cascade do |t|
     t.string "role_name"
+    t.boolean "can_destroy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
