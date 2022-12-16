@@ -8,3 +8,5 @@
 
 Role.create!(role_name: 'Admin', can_destroy: true)
 Role.create!(role_name: 'Common', can_destroy: false)
+
+User.create!(email: 'admin@mail.com', roles_id: Role.find_by(role_name: 'Admin').id, password: '123456')

@@ -22,6 +22,11 @@ bundle exec rails db:seed
 bundle exec rails s
 ```
 
+## Доступ админа
+
+Логин: admin@mail.com
+Пароль: 123456
+
 ## Доступ к другим документам
 
 [https://drive.google.com/drive/folders/1ic_F-bZrXQDrkryJuwTGDXm1VZ54MUr1?usp=sharing](https://drive.google.com/drive/folders/1ic_F-bZrXQDrkryJuwTGDXm1VZ54MUr1?usp=sharing)
