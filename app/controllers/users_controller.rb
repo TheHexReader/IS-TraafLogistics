@@ -21,6 +21,23 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # To do
+    @user = User.find_by(id: params[:id])
+    @roles = Role.all
+  end
+
+  def update
+    @user = User.find_by(id: params[:id])
+
+    if @user.update(user_params)
+      redirect_to user_path(@user), notice: :success
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  protected
+
+  def user_params
+    params.require(:user).permit(:email, :roles_id, :password)
   end
 end

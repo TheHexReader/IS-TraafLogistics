@@ -21,5 +21,5 @@
             tr
               td
                 = button_to 'Удалить', user_path, method: :delete, class: 'btn btn-danger m-1'
-                = link_to 'Редактировать', root_path, class: 'btn btn-warning m-1'
+                = link_to 'Редактировать', edit_user_path(@user), class: 'btn btn-warning m-1'
               td
